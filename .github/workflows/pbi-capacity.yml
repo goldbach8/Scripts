@@ -1,6 +1,7 @@
 name: Controlar Capacidad Power BI
 
 on:
+  workflow_dispatch:
   schedule:
     # Encender a las 07:20
     - cron: '20 7 * * 1-5'
