@@ -12,7 +12,7 @@ on:
     # Apagar a las 14:30
     - cron: '30 14 * * 1-5'
     # Encender a las 15:45
-    - cron: '0 16 * * 1-5'
+    - cron: '45 15 * * 1-5'
     # Apagar a las 17:00
     - cron: '0 17 * * 1-5'
 
@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Configurar acción (start o stop)
+        shell: pwsh
         run: |
           $hora = (Get-Date).ToUniversalTime().AddHours(-3).ToString("HH:mm")
           if ($hora -eq "07:20" -or $hora -eq "12:00" -or $hora -eq "15:45") {
