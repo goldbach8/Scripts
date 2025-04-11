@@ -4,17 +4,17 @@ on:
   workflow_dispatch:
   schedule:
     # Encender a las 07:20
-    - cron: '20 7 * * 1-5'
+    - cron: '20 10 * * 1-5'
     # Apagar a las 09:00
-    - cron: '0 9 * * 1-5'
-    # Encender a las 12:00
     - cron: '0 12 * * 1-5'
+    # Encender a las 12:00
+    - cron: '0 15 * * 1-5'
     # Apagar a las 14:30
-    - cron: '30 14 * * 1-5'
+    - cron: '30 17 * * 1-5'
     # Encender a las 15:45
-    - cron: '45 15 * * 1-5'
+    - cron: '45 18 * * 1-5'
     # Apagar a las 17:00
-    - cron: '0 17 * * 1-5'
+    - cron: '0 20 * * 1-5'
 
 jobs:
   controlar-capacidad:
